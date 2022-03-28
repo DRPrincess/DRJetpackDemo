@@ -1,4 +1,4 @@
-package com.dr.dr_jetpackdemo
+package com.dr.jetpackdemo
 
 import org.junit.Test
 

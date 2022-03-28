@@ -1,8 +1,7 @@
-package com.dr.dr_jetpackdemo
+package com.dr.jetpackdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 
 class TestActivity : AppCompatActivity() {
 

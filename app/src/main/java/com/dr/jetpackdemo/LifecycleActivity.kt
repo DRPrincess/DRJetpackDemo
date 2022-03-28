@@ -1,4 +1,4 @@
-package com.dr.dr_jetpackdemo
+package com.dr.jetpackdemo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

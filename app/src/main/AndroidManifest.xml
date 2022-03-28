@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dr.dr_jetpackdemo">
+    package="com.dr.jetpackdemo">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TestActivity"></activity>
-        <activity android:name=".ViewModelActivity" /> <!-- <activity android:name=".LifecycleActivity"></activity> -->
-        <activity android:name=".LifecycleActivity">
+        <activity android:name="com.dr.jetpackdemo.TestActivity"></activity>
+        <activity android:name="com.dr.jetpackdemo.ViewModelActivity" /> <!-- <activity android:name=".LifecycleActivity"></activity> -->
+        <activity android:name="com.dr.jetpackdemo.LifecycleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
