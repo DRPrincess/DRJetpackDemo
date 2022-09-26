@@ -3,18 +3,18 @@
     package="com.dr.jetpackdemo">
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.dr.jetpackdemo.TestActivity"></activity>
-        <activity android:name="com.dr.jetpackdemo.ViewModelActivity" /> <!-- <activity android:name=".LifecycleActivity"></activity> -->
-        <activity android:name="com.dr.jetpackdemo.LifecycleActivity">
+        <activity android:name=".TestActivity" />
+        <activity android:name=".ViewModelActivity" /> <!-- <activity android:name=".LifecycleActivity"></activity> -->
+        <activity android:name=".lifecycle.LifecycleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
