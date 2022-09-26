@@ -33,7 +33,6 @@ class LifecycleActivity : AppCompatActivity() {
         }
 
         testSafeIterableMap()
-ø
 
 
     }

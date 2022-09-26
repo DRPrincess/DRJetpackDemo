@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Hello World!"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOther"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Hello World!"
+            android:layout_marginTop="100dp" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
