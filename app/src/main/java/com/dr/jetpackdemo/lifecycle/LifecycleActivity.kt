@@ -8,27 +8,29 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import com.dr.jetpackdemo.R
-import kotlinx.android.synthetic.main.activity_lifecycle.*
+import com.dr.jetpackdemo.databinding.ActivityLifecycleBinding
 
 class LifecycleActivity : AppCompatActivity() {
 
 
     private lateinit var myLocationListener: MyLocationListener
-
+    private lateinit var binding: ActivityLifecycleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lifecycle)
+        binding = ActivityLifecycleBinding.inflate(layoutInflater)
+        val view = binding.root
         lifecycle.addObserver(ActivityLifeCycleObserver())
+        setContentView(view)
 
         val fragment = LifecycleFragment()
 
 
-        btn_add.setOnClickListener {
+        binding.btnAdd.setOnClickListener {
             supportFragmentManager.beginTransaction().add(R.id.fragment, fragment).commit()
         }
 
-        btn_remove.setOnClickListener {
+        binding.btnRemove.setOnClickListener {
             supportFragmentManager.beginTransaction().remove(fragment).commit()
         }
 

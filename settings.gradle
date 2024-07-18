@@ -1,2 +1,20 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+}
 include ':app'
 rootProject.name='DR_JetpackDemo'

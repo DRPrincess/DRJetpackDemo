@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.Interpolator
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dr.jetpackdemo.R
-import kotlinx.android.synthetic.main.layout_recycler_item_view.view.*
 import java.lang.reflect.Method
 
 /**
@@ -20,12 +20,16 @@ import java.lang.reflect.Method
  * 时间： 2022/9/26
  */
 class DemoAdapter(private val recyclerView: RecyclerView) : RecyclerView.Adapter<DemoHolder>() {
+
+    private  val TAG = "DemoAdapter"
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DemoHolder {
+
         val itemView =
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.layout_recycler_item_view_demo, parent, false)
-
-        return DemoHolder(itemView, recyclerView)
+        val holder = DemoHolder(itemView, recyclerView)
+        Log.d(TAG, "onCreateViewHolder---holder:$holder")
+        return holder
     }
 
     override fun getItemCount(): Int {
@@ -33,7 +37,8 @@ class DemoAdapter(private val recyclerView: RecyclerView) : RecyclerView.Adapter
     }
 
     override fun onBindViewHolder(holder: DemoHolder, position: Int) {
-        holder.itemView.tv.text = "position:$position"
+        Log.w(TAG, "onBindViewHolder---position:$position,holder:$holder")
+        holder.itemView.findViewById<TextView>(R.id.tv).text = "position:$position"
     }
 
 

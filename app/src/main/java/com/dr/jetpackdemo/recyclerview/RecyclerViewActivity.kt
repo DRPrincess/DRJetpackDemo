@@ -1,11 +1,11 @@
 package com.dr.jetpackdemo.recyclerview
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.dr.jetpackdemo.R
-import kotlinx.android.synthetic.main.activity_recycler_view.*
+import com.dr.jetpackdemo.databinding.ActivityRecyclerViewBinding
+
 
 
 /**
@@ -15,28 +15,38 @@ import kotlinx.android.synthetic.main.activity_recycler_view.*
  */
 class RecyclerViewActivity : AppCompatActivity() {
 
+    private  val TAG = "RecyclerViewActivity"
+    private lateinit var binding: ActivityRecyclerViewBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(
+        binding = ActivityRecyclerViewBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.recyclerView.layoutManager = LinearLayoutManager(
             this,
-            LinearLayoutManager.HORIZONTAL,
+            LinearLayoutManager.VERTICAL,
             false
         )
-        recyclerView.adapter = DemoAdapter(recyclerView)
+        binding.recyclerView.adapter = DemoAdapter( binding.recyclerView)
 
-
-
-        recyclerViewOther.layoutManager = LinearLayoutManager(
-            this,
-            LinearLayoutManager.HORIZONTAL,
-            false
-        )
-//        val horizontalManager =
-//            StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.HORIZONTAL)
-
-
-        recyclerViewOther.adapter = MyAdapter(recyclerViewOther)
+        val test = 0.1+0.2
+        Log.i(TAG,"test----"+test)
+        if(test == 0.3){
+            Log.i(TAG,"test---true")
+        }else{
+            Log.i(TAG,"test---false")
+        }
+//
+//        binding.recyclerViewOther.layoutManager = LinearLayoutManager(
+//            this,
+//            LinearLayoutManager.HORIZONTAL,
+//            false
+//        )
+////        val horizontalManager =
+////            StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.HORIZONTAL)
+//
+//
+//        binding.recyclerViewOther.adapter = MyAdapter( binding.recyclerViewOther)
 
 
     }
